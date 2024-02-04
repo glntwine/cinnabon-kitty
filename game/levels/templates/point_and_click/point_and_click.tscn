@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfolpf0n3jrfh"]
+
+[ext_resource type="Script" path="res://levels/templates/point_and_click/Player.gd" id="1_a6h5o"]
+[ext_resource type="Texture2D" uid="uid://c2628gkmtulmj" path="res://Silly_Placeholders.png" id="2_diawy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cog56"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srhdi"]
+atlas = ExtResource("2_diawy")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5xmhc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srhdi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_a4f6v"]
+vertices = PackedVector2Array(1138, 624, 21, 630, 157, 377, 1039, 368)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(4, 641, 151, 368, 1046, 358, 1153, 634)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[node name="PointAndClick" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(260, 497)
+scale = Vector2(5.935, 5.935)
+script = ExtResource("1_a6h5o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_cog56")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_5xmhc")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Player"]
+
+[node name="Environment" type="Area2D" parent="."]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Environment"]
+navigation_polygon = SubResource("NavigationPolygon_a4f6v")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
