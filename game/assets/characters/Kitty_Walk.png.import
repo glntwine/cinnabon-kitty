@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2628gkmtulmj"
-path="res://.godot/imported/Silly_Placeholders.png-0e0420a08c4c028f97651a8635002a67.ctex"
+uid="uid://b12j2tbljtwkn"
+path="res://.godot/imported/Kitty_Walk.png-10d33e58b982dd272466fef7a0b13fd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Silly_Placeholders.png"
-dest_files=["res://.godot/imported/Silly_Placeholders.png-0e0420a08c4c028f97651a8635002a67.ctex"]
+source_file="res://assets/characters/Kitty_Walk.png"
+dest_files=["res://.godot/imported/Kitty_Walk.png-10d33e58b982dd272466fef7a0b13fd0.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
