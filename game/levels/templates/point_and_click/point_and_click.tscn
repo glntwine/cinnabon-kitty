@@ -161,8 +161,7 @@ shape = SubResource("RectangleShape2D_cog56")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_5xmhc")
-animation = &"run"
-frame_progress = 0.13862
+animation = &"walk"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="Player"]
 
@@ -179,6 +178,15 @@ offset_bottom = 40.0
 
 [node name="InteractionMenu" type="VBoxContainer" parent="UI"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 4.0
 script = ExtResource("3_l6jw8")
+
+[node name="ColorRect" type="ColorRect" parent="UI/InteractionMenu"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+color = Color(0.0509804, 0.631373, 0.615686, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="UI/InteractionMenu"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+color = Color(0.0509804, 0.631373, 0.615686, 1)
