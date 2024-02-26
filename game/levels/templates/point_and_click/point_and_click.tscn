@@ -1,147 +1,12 @@
-[gd_scene load_steps=24 format=3 uid="uid://bfolpf0n3jrfh"]
+[gd_scene load_steps=10 format=3 uid="uid://bfolpf0n3jrfh"]
 
 [ext_resource type="Script" path="res://levels/templates/point_and_click/Player.gd" id="1_a6h5o"]
-[ext_resource type="Texture2D" uid="uid://b12j2tbljtwkn" path="res://assets/characters/Kitty_Walk.png" id="2_vc55d"]
+[ext_resource type="SpriteFrames" uid="uid://kmtqrh0lko03" path="res://assets/characters/kitty_spriteframes.tres" id="2_0ep8w"]
+[ext_resource type="Texture2D" uid="uid://7jub4jt2372e" path="res://assets/objects/naoki.png" id="3_2b6gj"]
 [ext_resource type="Script" path="res://levels/templates/point_and_click/InteractionMenu.gd" id="3_l6jw8"]
+[ext_resource type="Script" path="res://levels/templates/point_and_click/Object.gd" id="3_u04ne"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cog56"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yeoyc"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(0, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n4qg6"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(416, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_unl2t"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(448, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o16af"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(480, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h151q"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(512, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hrxnv"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(544, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mrpp5"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(576, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8frew"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(608, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n0ule"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(640, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c62hp"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(160, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hx57b"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(192, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0dlio"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(224, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_85mm2"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(256, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6d6qy"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(288, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ct8m3"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(320, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cq8oi"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(352, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ye6dk"]
-atlas = ExtResource("2_vc55d")
-region = Rect2(384, 0, 32, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_5xmhc"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yeoyc")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n4qg6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_unl2t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o16af")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h151q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hrxnv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mrpp5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8frew")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n0ule")
-}],
-"loop": true,
-"name": &"run",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c62hp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hx57b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0dlio")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_85mm2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6d6qy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ct8m3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cq8oi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ye6dk")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 12.0
-}]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_a4f6v"]
 vertices = PackedVector2Array(1138, 624, 21, 630, 157, 377, 1039, 368)
@@ -149,9 +14,26 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(4, 641, 151, 368, 1046, 358, 1153, 634)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lrpl"]
+atlas = ExtResource("3_2b6gj")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_km6k6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lrpl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
 [node name="PointAndClick" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
+light_mask = 4
+visibility_layer = 4
 position = Vector2(260, 497)
 scale = Vector2(3, 3)
 script = ExtResource("1_a6h5o")
@@ -160,33 +42,53 @@ script = ExtResource("1_a6h5o")
 shape = SubResource("RectangleShape2D_cog56")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-sprite_frames = SubResource("SpriteFrames_5xmhc")
-animation = &"walk"
+sprite_frames = ExtResource("2_0ep8w")
+animation = &"run"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="Player"]
 
-[node name="Environment" type="Area2D" parent="."]
-
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Environment"]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Player"]
+visible = false
+position = Vector2(-86.6667, -165.667)
+scale = Vector2(0.333333, 0.333333)
 navigation_polygon = SubResource("NavigationPolygon_a4f6v")
+
+[node name="Environment" type="Sprite2D" parent="."]
+
+[node name="Object" type="Node2D" parent="Environment" groups=["game_objects"]]
+scale = Vector2(3, 3)
+script = ExtResource("3_u04ne")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Environment/Object"]
+position = Vector2(167.667, 177.333)
+sprite_frames = SubResource("SpriteFrames_km6k6")
+animation = &"idle"
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="InteractionMenu" type="VBoxContainer" parent="UI"]
 layout_mode = 0
-offset_bottom = 4.0
+offset_right = 50.0
+offset_bottom = 150.0
 script = ExtResource("3_l6jw8")
 
 [node name="ColorRect" type="ColorRect" parent="UI/InteractionMenu"]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-size_flags_stretch_ratio = 0.0
-color = Color(0.0509804, 0.631373, 0.615686, 1)
+color = Color(0.309804, 0.619608, 0.6, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="UI/InteractionMenu"]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-size_flags_stretch_ratio = 0.0
-color = Color(0.0509804, 0.631373, 0.615686, 1)
+color = Color(0.839216, 0.403922, 0.415686, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="UI/InteractionMenu"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.551682, 0.586842, 0.273147, 1)
